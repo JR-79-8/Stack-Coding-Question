@@ -1,0 +1,22 @@
+class SchoolUser:
+    def get_role(self):
+        print("I am a School User")
+
+class Student(SchoolUser):
+    def get_role(self):
+        print("I am a Student")
+
+class Teacher(SchoolUser):
+    def get_role(self):
+        print("I am a Teacher")
+
+Student1=Student()
+Teacher1=Teacher()
+
+SchoolUsers = [Student1, Teacher1]
+
+for s in SchoolUsers:
+    s.get_role()
+
+#reflection:
+#This code demonstrates polymorphysism as both the Student and Teacher classes are child classes of the StudentUser class, they both take the get_role() method and overwrite it to suit the specific class more.
