@@ -1,0 +1,39 @@
+browser_stack = []
+
+def push(stack, item):
+    stack.append(item)
+
+def pop(stack):
+    if len(stack) == 0:
+        print("The stack is empty")
+    return stack.pop()
+
+def peek(stack):
+    if len(stack) == 0:
+        return "stack is empty"
+    return stack[-1]
+
+def is_empty(stack):
+    return len(stack) == 0
+
+print("Items in stack are:")
+push(browser_stack, "Google")
+push(browser_stack, "Yahoo")
+push(browser_stack, "Youtube")
+push(browser_stack, "Amazon")
+
+for item in browser_stack:
+    print(item)
+
+print("Websites that remain:")
+pop(browser_stack)
+for item in browser_stack:
+    print(item)
+
+print("Websites that remain:")
+pop(browser_stack)
+for item in browser_stack:
+    print(item)
+
+print("Last website is:")
+print(peek(browser_stack))
